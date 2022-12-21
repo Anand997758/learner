@@ -1,0 +1,22 @@
+21-12-2022
+============
+1. i saw a kodekloud regarding to kubernetes
+   i checked a docker logs and pod logs 
+A)kubectl get pods 
+   kubectl logs podname
+A)docker ps 
+   kubectl logs containerid
+
+# if minikube you have see metrics use this command:
+minikube addons enable metrics-server
+
+#others we have to use this url:
+git clone https://github.com/kubernetes-incubator/metrics-server.git
+#after give the command:
+#this command deploy a set of pods services and roles enable a server
+kubectl create -f deploy/1.8+/
+
+#if we want nodes metrics give the command(cpu and memory):
+kubectl top node
+#and same metrics to see the in pods give this command(cpu and memory):
+kubectl top pod
